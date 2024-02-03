@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Upload to Firebase</title>
+    <!-- Include Firebase SDK (modular version) -->
+    <script src="https://www.gstatic.com/firebasejs/10.4.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.4.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.4.0/firebase-storage-compat.js"></script>
+    <!-- Include jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+    </nav>
+
+    <label for="categoryInput">Category:</label>
+    <input type="text" id="categoryInput" placeholder="Enter category">
+
+    <input type="file" id="imageInput" accept="image/*">
+    <button onclick="uploadImage()">Upload Image</button>
+
+    <div id="imageContainer" class="card" style="display: none;">
+        <img id="uploadedImage" alt="Uploaded Image">
+        <div class="card-details">
+            <div class="card-category" id="categoryDisplay">Category</div>
+            <div class="card-title">Card Title</div>
+            <div class="card-description">Card Description goes here.</div>
+            <div class="button-container">
+                <button onclick="removeImage()">Remove Image</button>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="script.js"></script>
+</body>
+</html>
